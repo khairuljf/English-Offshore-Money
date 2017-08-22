@@ -1,0 +1,955 @@
+body {
+	font-size: 14px;
+}
+#main {
+    margin: 0;
+    position: relative;
+    width: 1010px;
+    z-index: 2;
+}
+.main-holder {
+    background: #fff none repeat scroll 0 0;
+    padding: 0;
+    width: 100%;
+}
+.main-frame {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #fff 0%, #fff 91%, #f9f9f9 100%) repeat scroll 0 0;
+    overflow: hidden;
+}
+.main-holder::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.registration-form {
+    background: #96bcf1 url("https://en.offshore.money/images/shadow01.png") no-repeat scroll 0 0;
+    padding: 15px 17px 39px;
+    position: relative;
+    text-transform: uppercase;
+
+}
+.registration-form .free-text {
+    background: rgba(0, 0, 0, 0) url("https://en.offshore.money/images/free-text.png") no-repeat scroll 0 0;
+    display: block;
+    height: 70px;
+    margin: 0 0 24px -5px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 272px;
+}
+.registration-form .free-text2 {
+    background: rgba(0, 0, 0, 0) url("https://en.offshore.money/images/free-text2.png") no-repeat scroll 0 0;
+    display: block;
+    height: 70px;
+    margin: 0 0 24px -5px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 272px;
+}
+.registration-form label {
+    color: #333;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 0 1px 13px;
+}
+.registration-form label span {
+    color: #f9f9f9;
+}
+.registration-form input[type="text"], 
+.registration-form .tel, 
+.registration-form .email {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #79a3de;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3) inset;
+    color: #333;
+    height: 33px;
+    line-height: 33px;
+    margin: 0 0 16px 9px;
+    padding: 7px 10px;
+    width: 255px;
+}
+.registration-form input.error[type="text"] {
+    border: 1px solid #f24526;
+}
+.registration-form select {
+    display: block;
+    width: 255px;
+}
+.jcf-hidden {
+    display: block !important;
+    left: -9999px !important;
+    position: absolute !important;
+}
+.select-area {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #79a3de;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3) inset;
+    color: #333;
+    cursor: default;
+    display: block;
+    height: 33px;
+    margin: 0 0 16px 9px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+.select-focus {
+    border-color: #f00;
+}
+.select-area .center {
+    display: block;
+    padding: 5px 8px;
+    white-space: nowrap;
+}
+.select-disabled {
+    background: #eee none repeat scroll 0 0;
+}
+.select-area .select-opener {
+    background: rgba(0, 0, 0, 0) url("https://en.offshore.money/images/sprite.png") no-repeat scroll 0 -969px;
+    height: 31px;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 30px;
+}
+.select-options {
+    background: #fff none repeat scroll 0 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: 2000;
+}
+.select-options .drop-holder {
+    border: 1px solid #79a3de;
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.3) inset;
+    height: 1%;
+    overflow: hidden;
+}
+.select-options ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.select-options ul li {
+    float: left;
+    width: 100%;
+}
+.select-options ul a {
+    color: #000;
+    cursor: default;
+    display: block;
+    height: 1%;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+.select-options .item-selected a {
+    background: #007 none repeat scroll 0 0;
+    color: #fff;
+    text-decoration: none;
+}
+.select-options .optgroup {
+    clear: both;
+}
+.select-options .optgroup strong {
+    display: block;
+    padding: 5px;
+}
+.select-options .optgroup ul a {
+    padding-left: 30px;
+}
+.submit-wrap {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #2560b4 0%, #1f56a0 23%, #093058 74%, #01223e 100%) repeat scroll 0 0;
+    border: 7px solid #8bafe0;
+    border-radius: 25px;
+    box-shadow: 0 1px 1px 0 rgba(155, 188, 241, 0.7);
+    display: block;
+    height: 55px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    width: 260px;
+}
+.registration-form input[type="submit"] {
+    background: rgba(0, 0, 0, 0) url("https://en.offshore.money/images/sprite.png") no-repeat scroll 222px -410px;
+    border: 0 none;
+    color: #fff;
+	font-weight: bold;
+    display: block;
+    font: 18px/40px "avenir95_black",Arial,Helvetica,sans-serif;
+    height: 100%;
+    padding: 1px 72px 4px 10px;
+    text-transform: uppercase;
+    width: 100%;
+}
+.registration-form .out-shadow {
+    background: rgba(0, 0, 0, 0) url("https://en.offshore.money/images/shadow02.png") no-repeat scroll 0 0;
+    height: 352px;
+    left: 0;
+    margin: -8px 0 0 -17px;
+    position: absolute;
+    top: 0;
+    width: 338px;
+    z-index: -1;
+}
+.main-container {
+    background: #fff none repeat scroll 0 0;
+    float: left;
+    margin: 0 325px 0 0;
+}
+.main-c1 {
+    float: left;
+    width: 100%;
+}
+.services-list {
+    list-style: outside none none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+.services-list li {
+    float: left;
+    margin: 0 0 0 1px;
+    position: relative;
+}
+.services-list li img {
+    display: block;
+}
+.services-list .services-text {
+    background: rgba(0, 0, 0, 0) url("https://en.offshore.money/images/bg-services.png") repeat scroll 0 0;
+    bottom: 0;
+    left: 0;
+    padding: 3px 0 0;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+.services-list .services-text h2 {
+    color: #fff;
+    font: bold 14px/1 Helvetica,Arial,sans-serif;
+    margin: 0;
+}
+.services-list .services-text .more {
+    background: rgba(0, 0, 0, 0) url("https://en.offshore.money/images/sprite.png") no-repeat scroll 66px 3px;
+    color: #96bcf1;
+    font: bold 11px/1 Helvetica,Arial,sans-serif;
+    padding: 0 14px 0 0;
+    text-decoration: none;
+    word-spacing: 2px;
+}
+.services-list .services-text .more:hover {
+    text-decoration: underline;
+}
+.phone-block-wrap {
+    background: #fff none repeat scroll 0 0;
+}
+.phone-block {
+    border-bottom: 1px solid #e8e8e9;
+    color: #4580d3;
+    font: 24px/1 Helvetica,Arial,sans-serif;
+    margin: 0 auto;
+    padding: 8px 10px 17px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 632px;
+}
+.phone-block.add {
+    padding: 17px 10px;
+}
+.phone-block .phone span {
+    color: #023884;
+    font-size: 36px;
+    line-height: 42px;
+    padding: 0 0 0 6px;
+}
+.phone-block .phone a {
+    color: #023884 !important;
+    text-decoration: none !important;
+}
+.satisfied {
+    color: #023884;
+    font: 12px/18px Arial,Helvetica,sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+.satisfied.add .satisfied-logos li {
+    padding: 0 51px;
+}
+.satisfied-holder {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #fff 0%, #efeff0 100%) repeat scroll 0 0;
+    padding: 16px 10px 20px;
+}
+.satisfied.add .satisfied-holder {
+    padding: 12px 10px 25px;
+}
+.satisfied span {
+    display: block;
+    font: bold 14px/20px Helvetica,Arial,sans-serif;
+    margin: 0 0 14px;
+}
+.satisfied-logos {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.satisfied-logos li {
+    display: inline;
+    padding: 0 19px;
+}
+.satisfied-logos a img {
+    vertical-align: middle;
+}
+.satisfied-text {
+    background: #fff none repeat scroll 0 0;
+    color: #333;
+    padding: 39px 5px 45px 26px;
+    text-align: left;
+    text-transform: none;
+}
+.satisfied p {
+    margin: 0 0 5px;
+}
+.satisfied p strong {
+    color: #023884;
+    font-size: 14px;
+}
+.cite {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #e6e5e5 0%, #fafafa 5%, #fafafa 100%) repeat scroll 0 0;
+    padding: 25px 3px 42px 26px;
+}
+.main-frame h2 {
+    background: rgba(0, 0, 0, 0) url("https://en.offshore.money/images/arrow01.png") no-repeat scroll -9999px center;
+    color: #062b4f;
+    font: bold 30px/1 Helvetica,Arial,sans-serif;
+    margin: 0 0 27px;
+    white-space: nowrap;
+}
+.cite-block {
+    overflow: hidden;
+    width: 100%;
+}
+.cite-block-holder {
+    margin: 0 -15px 0 0;
+    overflow: hidden;
+}
+.cite-block blockquote {
+    float: left;
+    margin: 0 39px 0 0;
+    position: relative;
+}
+.cite-block blockquote q {
+    background: #fff none repeat scroll 0 0;
+    border: 4px solid #e8e7e7;
+    border-radius: 19px;
+    color: #333;
+    display: block;
+    padding: 16px 15px 22px 36px;
+    position: relative;
+    width: 400px;
+}
+.cite-block blockquote cite {
+    color: #222;
+    display: block;
+    font: bold 14px/18px Helvetica,Arial,sans-serif;
+    padding: 16px 0 0 93px;
+}
+.cite-block blockquote cite span {
+    color: #777;
+    display: block;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: normal;
+    line-height: 20px;
+}
+.cite-block blockquote .aroow {
+    background: rgba(0, 0, 0, 0) url("https://en.offshore.money/images/arrow01.png") no-repeat scroll 0 0;
+    bottom: -45px;
+    height: 45px;
+    left: 27px;
+    position: absolute;
+    width: 52px;
+}
+.benefits-block {
+    background: #fff none repeat scroll 0 0;
+    padding: 33px 0 46px 30px;
+    position: relative;
+}
+.benefits-image {
+    bottom: 1px;
+    position: absolute;
+    right: 0;
+    z-index: 0;
+}
+.benefits-holder {
+    position: relative;
+    z-index: 1;
+}
+.benefits-list {
+    font: 13px/17px Arial,Helvetica,sans-serif;
+    list-style: outside none none;
+    margin: 0;
+    padding: 2px 5px 5px 33px;
+}
+.benefits-list .first {
+    width: 500px !important;
+}
+.benefits-list .last {
+    padding: 0 0 0 40px;
+    width: 400px !important;
+}
+.benefits-list li {
+    background: rgba(0, 0, 0, 0) url("https://en.offshore.money/images/check.png") no-repeat scroll 1px -1px;
+    margin: 0 0 8px;
+    padding: 0 0 0 25px;
+}
+.benefits-block-text {
+    padding: 22px 227px 5px 9px;
+}
+.benefits-block p {
+    margin: 0 0 18px;
+}
+.application-wrap {
+    padding: 14px 0 0;
+}
+a.application {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #9dc4e5 0%, #78afdc 4%, #61a3d7 7%, #5e9fd3 32%, #4d91c6 100%) repeat scroll 0 0;
+    border-color: #4d91c6;
+    border-image: none;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    box-shadow: -1px 1px 0 rgba(189, 189, 189, 1);
+    color: #fff;
+    display: inline-block;
+    font: bold 18px/19px Arial,Helvetica,sans-serif;
+    padding: 0 9px 0 0;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    text-transform: capitalize;
+    vertical-align: top;
+}
+* + html a.application {
+    display: inline;
+}
+a.application span {
+    background: rgba(0, 0, 0, 0) url("https://en.offshore.money/images/arrow-sprite.png") no-repeat scroll 100% 4px;
+    display: inline-block;
+    padding: 4px 43px 6px 8px;
+    vertical-align: top;
+}
+* + html a.application span {
+    display: inline;
+}
+#sidebar {
+    float: right;
+    padding: 0;
+}
+.products {
+    background: #14437d none repeat scroll 0 0;
+    padding: 0 0 66px;
+}
+.products h1 {
+    background: #0a366e none repeat scroll 0 0;
+    color: #fff;
+    font: bold 18px/24px Arial,Helvetica,sans-serif;
+    margin: 0 0 18px;
+    padding: 8px 14px 11px;
+    text-transform: uppercase;
+}
+.product {
+    border: 5px solid #0c3567;
+    margin: 0 auto 23px;
+    width: 282px;
+}
+.product img {
+    display: block;
+}
+.product-text {
+    background: #96bcf1 none repeat scroll 0 0;
+    color: #010101;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 7px 14px 8px 7px;
+}
+.product-text .btn-more {
+    background: rgba(0, 0, 0, 0) url("https://en.offshore.money/images/arrow-sprite.png") no-repeat scroll -482px -486px;
+    float: right;
+    height: 14px;
+    margin: 2px 0 0;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 18px;
+}
+#content {
+    float: left;
+    overflow: hidden;
+    width: 809px;
+}
+.intro-block {
+    border-bottom: 9px solid #4580d3;
+    position: relative;
+}
+.intro-block img {
+    display: block;
+}
+.intro-block .heading {
+    background: rgba(0, 0, 0, 0) url("https://en.offshore.money/images/bg-image.png") repeat scroll 0 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+.intro-block h1 {
+    color: #f9f9f9;
+    font: bold 36px/40px Arial,Helvetica,sans-serif;
+    margin: 0;
+    padding: 2px 14px 3px;
+    text-shadow: 1px 1px 2px #000;
+}
+.content-holder {
+    padding: 35px 24px 5px;
+}
+.content-holders p {
+	 margin: 0 0 17px;
+}
+.content-holder .listings p {
+    margin: 0 0 17px 160px;
+}
+.content-holder p a {
+	color: #333333;
+	text-decoration: underline;
+}
+.content-holder p strong {
+    color: #023884;
+    font-size: 14px;
+}
+.content-holder h2 {
+    color: #013072;
+    font: bold 24px/1 Arial,Helvetica,sans-serif;
+    margin: 0 0 19px;
+    padding: 30px 0 0;
+}
+.content-holder .listings img {
+	float: left;
+}
+.align-center {
+	text-align: center;
+}
+.content-holder img {
+	max-width: 100%;
+}
+.banners-list {
+    float: left;
+    list-style: outside none none;
+    margin: 0 46px 0 0;
+    padding: 4px 0 0;
+    width: 140px;
+}
+.banners-list li {
+    margin: 0 0 22px;
+}
+.banners-list li img {
+    display: block;
+    margin: 0 auto;
+}
+.data-box {
+    color: #888;
+    float: left;
+    overflow: hidden;
+    width: 795px;
+}
+.link-list {
+    list-style: outside none none;
+    margin: 0 0 20px -12px;
+    overflow: hidden;
+    padding: 0;
+}
+.link-list li {
+    background: rgba(0, 0, 0, 0) url("https://en.offshore.money/images/separator03.png") no-repeat scroll 0 4px;
+    float: left;
+    padding: 0 11px;
+}
+.link-list li a {
+    color: #08c;
+    text-decoration: none;
+}
+.link-list li a:hover {
+    text-decoration: underline;
+}
+.data-box p {
+    margin: 0 0 24px;
+}
+.data-box p a, .data-box span a {
+    color: #888 !important;
+    text-decoration: none !important;
+}
+.data-box span {
+    display: block;
+    font-size: 11px;
+    line-height: 13px;
+}
+div.standard-form input, div.header-form input {
+    font-size: 9pt;
+    height: 16px;
+    padding: 2px 1px 3px;
+}
+div.standard-form textarea, div.header-form textarea, div.referral-form textarea {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid black;
+    font-size: 9pt;
+    overflow: auto;
+    padding: 2px 1px 3px;
+}
+div.standard-form .multiline-field textarea, div.referral-form textarea {
+    height: 40px;
+    width: 200px;
+}
+.line-field {
+    height: 28px;
+    margin: 7px 0;
+}
+.multiline-field {
+    height: 40px;
+    margin: 7px 0;
+}
+.submit-line-field {
+    height: 28px;
+    margin: 7px 0;
+}
+.line-field label, .multiline-field label, .hugeline-field label, .submit-line-field label {
+    color: #b4886b;
+    display: block;
+    float: left;
+    font-weight: bold;
+    width: 175px;
+}
+div.partner-form .line-field label, div.partner-form .multiline-field label, div.partner-form .submit-line-field label {
+    width: 210px;
+}
+.line-field select, .multiline-field select {
+    width: 210px;
+}
+.line-field input, .submit-line-field input, .multiline-field input {
+    background: #ffffff none repeat scroll 0 0;
+    font-size: 9pt;
+    vertical-align: top;
+}
+.multiline-field label {
+    vertical-align: top;
+}
+.line-field label {
+    margin-top: 7px;
+    vertical-align: bottom;
+}
+.line-field .labelvalue {
+    display: block;
+    position: relative;
+    top: 7px;
+    vertical-align: bottom;
+}
+.submit-line-field label {
+    padding-top: 10px;
+    vertical-align: bottom;
+}
+.qlist a {
+    color: blue;
+}
+.qlist ul {
+    list-style: outside none none;
+}
+.qlist li {
+    padding: 3px 0;
+}
+.mobile-nav, #nav ul li.nav-mobile-only, .hd-get-quote-btn-wrap {
+    display: none;
+}
+@media screen and (max-width: 1024px) {
+body {
+    min-width: 100%;
+    width: 100%;
+}
+body, #wrapper, #main, .w1, .w2 {
+    display: block;
+    width: 100%;
+}
+#header, #main {
+    overflow: hidden;
+}
+.bar {
+    text-align: center;
+}
+.logo {
+    background-size: 100% auto;
+    display: block;
+    float: none;
+    height: 40px;
+    margin: 10px auto 15px;
+    width: 200px;
+}
+.navigation {
+    display: none;
+}
+.mobile-nav {
+    display: block;
+    height: 40px;
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    width: 40px;
+}
+.mobile-nav a {
+    background: rgba(0, 0, 0, 0) url("https://en.offshore.money/images/icon-mobile-nav.png") no-repeat scroll 50% 50% / 80% 80%;
+    border: 2px solid #fff;
+    display: block;
+    height: 20px;
+    margin: 0 0 10px 22px;
+    overflow: hidden;
+    padding: 6px;
+    text-align: left;
+    text-indent: 100%;
+    width: 25px;
+}
+#nav {
+    display: none;
+}
+#nav ul li {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    display: block;
+    float: none;
+    margin: 0;
+    padding: 5px 0 !important;
+    text-align: center;
+}
+#nav ul li.nav-mobile-only {
+    display: block;
+}
+.data-block {
+    display: block;
+    float: none;
+}
+.data-holder strong {
+    font-size: 21px;
+    white-space: normal;
+}
+.intro .bg-image {
+    height: auto;
+    max-width: 100%;
+}
+.intro-text strong, .intro-text {
+    max-width: 100%;
+}
+.awards-list {
+    max-width: 400px;
+}
+.awards-list li {
+    margin: 0 0 5px;
+    text-align: center;
+    width: 20%;
+}
+.awards-list li img {
+    display: inline;
+    height: auto;
+    max-width: 100%;
+}
+.info-block .column {
+    border: medium none;
+    float: none;
+    margin: 0 !important;
+    padding-left: 40px !important;
+    width: 70% !important;
+}
+.info-block .column.authorize {
+    background-position: -458px -432px;
+}
+.info-block .column.credit-mobile {
+    background-position: -474px -950px;
+}
+.cc-block2 {
+    padding: 0 20px;
+    text-align: center;
+}
+.main-container {
+    margin: 0;
+}
+.aside, #sidebar {
+    clear: both;
+    float: none;
+    margin: 0;
+    width: 100%;
+}
+.registration-form {
+    box-sizing: border-box;
+    width: 100%;
+}
+.registration-form .out-shadow {
+    display: none;
+}
+.registration-form fieldset {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 300px;
+}
+.services-list li {
+    height: 250px;
+    margin: 0;
+    overflow: hidden;
+    width: 20%;
+}
+.services-list li img {
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+}
+.phone-block {
+    padding: 10px 0;
+    width: 100%;
+}
+.phone-block .phone span {
+    display: block;
+    padding: 5px 0 0;
+}
+.satisfied-text {
+    padding: 39px 26px 45px;
+}
+.main-frame h2 {
+    white-space: normal;
+}
+.cite-block blockquote q {
+    box-sizing: border-box;
+    width: 100%;
+}
+.benefits-block {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.benefits-list {
+    padding: 2px 9px 0;
+}
+body .benefits-list .first, .benefits-list .last {
+    padding: 0 !important;
+    width: 100% !important;
+}
+.benefits-block-text {
+    padding-bottom: 100px;
+    padding-right: 9px;
+}
+#footer {
+    display: block;
+}
+#footer .footer-holder {
+    display: block;
+}
+#footer .footer-frame {
+    display: block;
+}
+#footer .wrap {
+    box-sizing: border-box;
+    width: 100%;
+}
+.banners-list {
+    text-align: center;
+    width: 100%;
+}
+.banners-list li {
+    display: inline-block;
+    padding: 0 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+.banners-list li img {
+    display: inline-block;
+}
+.data-box {
+    clear: both;
+    float: none;
+    width: 100%;
+}
+#content {
+    float: none;
+    width: 100%;
+}
+.intro-block img {
+    height: auto;
+    width: 100%;
+}
+.intro-block .heading {
+    bottom: auto;
+    left: auto;
+    position: relative;
+}
+.satisfied.add .satisfied-logos li {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.intro-block h1 {
+    font-size: 24px;
+}
+#main img, #main iframe {
+    max-width: 100%;
+}
+.line-field {
+    height: auto;
+}
+.multiline-field {
+    height: auto;
+}
+#sidebar #paychex_iframeid {
+    width: 100%;
+}
+.hd-get-quote-btn-wrap {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #fdb02b 0%, #f4a624 23%, #e39317 74%, #c97805 100%) repeat scroll 0 0;
+    border: 7px solid #8bafe0;
+    border-radius: 25px;
+    box-shadow: 0 1px 1px 0 rgba(155, 188, 241, 0.7);
+    display: block;
+    height: 40px;
+    margin: 10px auto 0;
+    text-transform: uppercase;
+    width: 260px;
+}
+.hd-get-quote-btn {
+    background: rgba(0, 0, 0, 0) url("https://en.offshore.money/images/sprite.png") no-repeat scroll 222px -410px;
+    border: 0 none;
+    color: #fff;
+    display: block;
+    font: 18px/40px "avenir95_black",Arial,Helvetica,sans-serif;
+    height: 100%;
+    padding: 0 72px 4px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+}
+.submit-wrap {
+	margin-left: 0px;
+}
+}
+@media only screen and (max-width: 810px) {
+.services-list li {
+    height: 200px;
+}
+}
+@media only screen and (max-width: 665px) {
+.services-list li {
+    height: 240px;
+    width: 33.3333%;
+}
+}
+@media only screen and (max-width: 445px) {
+.services-list li {
+    height: 280px;
+    width: 50%;
+}
+}
+@media only screen and (max-width: 375px) {
+.services-list li {
+    height: 250px;
+}
+}
