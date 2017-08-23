@@ -3,10 +3,12 @@
 function offshore_money(){
     
     add_theme_support('title-tag');
-    add_theme_support('post-thumbnail');
-    add_theme_support('custom-header');
-    
-    
+    add_theme_support('post-thumbnails');
+    $args = array(
+	'default-image' => get_template_directory_uri() . 'images/banner.jpg',
+);
+add_theme_support( 'custom-header', $args );
+ 
     register_nav_menus(array(
         'header-menu'=>'Header Menu',
         'main-menu'=>'Main Menu',
@@ -14,45 +16,142 @@ function offshore_money(){
     ));
     
     
-    
-    
-    
-    
-    
-    
-    
+
 }
 
 add_action('after_setup_theme','offshore_money');
 
-function my_custom_post(){
-    register_post_type('',array(
-        $labels = array(
-		'name'               =>  'Books', 'post type general name',
-		
-		'add_new'            =>  'Add New', 'book', 'your-plugin-textdomain',
-		'add_new_item'       => 'Add New Book',
-		'new_item'           => 'New Book' ,
-		'edit_item'          => 'Edit Book',
-		'view_item'          => 'View Book', 
-                'all_items'          =>  'All Books', 
-		'search_items'       =>  'Search Books', 
-		'parent_item_colon'  =>'Parent Books:', 
-		'not_found'          => 'No books found.',
-		'not_found_in_trash' => 'No books found in Trash', 
-	),
-        'public'             => true,
-        'menu_position'      => null,
-        'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'comments' )
-        
-        
-    ));
+function create_post_type() {
+
+
+  
+    register_post_type('service', array(
+        'labels' => array(
+            'name' => 'Our Service',
+             'all_items'=>'All Service'
+        ),
+        'public' => true,
+        'supports' => array('thumbnail', 'title', 'editor'),
+        'menu_icon'=>'dashicons-welcome-write-blog',
+            )
+    );
     
+    register_post_type('merchant_service', array(
+        'labels' => array(
+            'name' => 'Merchant Service',
+             'all_items'=>'All Service'
+        ),
+        'public' => true,
+        'supports' => array('title', 'editor'),
+        'menu_icon'=>'dashicons-welcome-write-blog',
+            )
+    );
+    register_post_type('company_post', array(
+        'labels' => array(
+            'name' => 'Company Page',
+             'all_items'=>'All Service'
+        ),
+        'public' => true,
+        'supports' => array('title', 'editor'),
+        'menu_icon'=>'dashicons-welcome-write-blog',
+            )
+    );
+      register_post_type('bankaccountpost', array(
+        'labels' => array(
+            'name' => 'Bank Account Page',
+             'all_items'=>'All Service'
+        ),
+        'public' => true,
+        'supports' => array('title', 'editor'),
+        'menu_icon'=>'dashicons-welcome-write-blog',
+            )
+    );
+      register_post_type('banner_service', array(
+        'labels' => array(
+            'name' => 'Banner Service',
+             'all_items'=>'All Service'
+        ),
+        'public' => true,
+        'supports' => array('title', 'editor','thumbnail'),
+        'menu_icon'=>'dashicons-welcome-write-blog',
+            )
+    );
+       register_post_type('banner_service', array(
+        'labels' => array(
+            'name' => 'Banner Service',
+             'all_items'=>'All Service'
+        ),
+        'public' => true,
+        'supports' => array('title', 'editor','thumbnail'),
+        'menu_icon'=>'dashicons-welcome-write-blog',
+            )
+    );
+            register_post_type('business-area', array(
+        'labels' => array(
+            'name' => 'Business Area',
+             'all_items'=>'All Service'
+        ),
+        'public' => true,
+        'supports' => array('title', 'thumbnail'),
+        'menu_icon'=>'dashicons-welcome-write-blog',
+            )
+    );
+       register_post_type('invest-page', array(
+        'labels' => array(
+            'name' => 'Invesment Post',
+             'all_items'=>'All Service'
+        ),
+        'public' => true,
+        'supports' => array('title', 'editor'),
+        'menu_icon'=>'dashicons-welcome-write-blog',
+            )
+    );
+       register_post_type('franchises-page', array(
+        'labels' => array(
+            'name' => 'Franchises Post',
+             'all_items'=>'All Service'
+        ),
+        'public' => true,
+        'supports' => array('title', 'editor'),
+        'menu_icon'=>'dashicons-welcome-write-blog',
+            )
+    );
+    
+    register_post_type('offer', array(
+        'labels' => array(
+            'name' => 'Our Offer',
+             'all_items'=>'All Offer'
+        ),
+        'public' => true,
+        'supports' => array('title',),
+        'menu_icon'=>'dashicons-welcome-write-blog',
+            )
+    );
+    
+    
+
+ 
 }
-add_action( 'init', 'my_custom_post' );
+
+add_action('init', 'create_post_type');
 
 
+include 'inc/shortcode.php';
 
+function default_menu() {
+    echo '<ul class="nav navbar-nav">';
+    if (is_user_logged_in()) {
+        echo '<li><a href="' . home_url() . '/wp-admin/nav-menus.php">Create a menu</a></li>';
+    } else {
+        echo '<li><a href="' . home_url() . '">Home</a></li>';
+    }
+    echo '</ul>';
+}
+
+
+/* Include CMB2 meta box */
+include 'metabox/init.php';
+include 'metabox/functions.php';
 
 
 function register_script_style() {
@@ -140,6 +239,20 @@ function mycustomize($customize) {
             ))
     );
 
+    
+    $customize->add_section('footer-section', array(
+        'title' => 'Footer Option',
+        'priority' => '120',
+    ));
+    $customize->add_setting('copyright', array(
+        'default' => '2016-2017 Offshore Money. All rights reserved.',
+        'transport' => 'refresh',
+    ));
+    $customize->add_control('copyright', array(
+        'section' => 'footer-section',
+        'label' => 'Copyright Text',
+        'type' => 'text',
+    ));
 
 }
 
